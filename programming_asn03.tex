@@ -1,0 +1,71 @@
+%% Assignment #2 for Dynamic Programming and Greedy Algorithms
+
+\documentclass[10pt,fullpage]{article}
+
+\usepackage{amsmath,amssymb,amsthm,amsfonts} % Typical maths resource packages
+
+\usepackage{graphics}                 % Packages to allow inclusion of graphics
+\usepackage{graphicx}
+
+\usepackage{hyperref}                 % For creating hyperlinks in cross references
+
+\usepackage{listings}
+
+\topmargin -1.5cm \oddsidemargin -0.04cm \evensidemargin -0.04cm
+\textwidth 16.00cm \textheight 23.50cm
+\parskip 7.2pt
+\parindent 0.25in
+
+\makeindex
+
+\title{ Advanced Algorithms Assignment II }
+
+
+\author{Matthew Bennett \\
+{\small\em Dynamic Programming and Greedy Algorithms HW \  Draft
+date \today }}
+
+ \date{ }
+
+\begin{document}
+\maketitle
+
+Bitonic Euclidean Traveling Salesperson Problem Due: February 7
+
+This problem is taken from problem 16-1 from the textbook.
+
+Professor Bitmeister has retired from the University and taken a
+job selling bit buckets to major computer manufacturers. This
+involves substantial traveling and Dr. Bitmeister wishes to reduce
+the mileage on his Hase Kettwiesel.
+
+You being a loyal graduate student of the old geezer have been
+asked to provide a computer algorithm for Dr. Bitmeister to use to
+plan his tour. He will provide you a sequence of geographic
+coordinates for the cities he needs to visit. These will be
+provided as a sequence of x and y values, one per line. He refuses
+to tell you how many cities he will visit. You need to prepare for
+an arbitrary number.
+
+You should assume that Dr. Bitmeister will cycle from city to city
+using the straightest possible path based on Euclidean distance
+(Pythagorean Theorem!). You are to devise an optimal bitonic tour,
+since arbitrary TSP tours could be too difficult to compute. A
+bitonic tour will start with the left-most city and proceed
+generally rightwards to the right-most city and then return to the
+left-most city on a generally leftwards path. So it seems like
+sorting on the x coordinates would be handy. For convenience, Dr.
+Bitmeister has offered to accept a solution where the x
+coordinates are all different.
+
+Your output should a sequence of x and y values. Start with the
+leftmost city and output 1 line per city on the tour. Repeat the
+leftmost city's coordinates at the end.
+
+You can create sample data sets using the script on orca:
+~seyfarth/scripts/gen_cities. Supply a number of the command line
+to indicate how many cities you want.
+
+You can view your results using xmgrace. If you file is named
+"results", simply enter "xmgrace results".
+\end{document}
